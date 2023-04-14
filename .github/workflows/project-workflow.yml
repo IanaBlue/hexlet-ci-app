@@ -1,0 +1,13 @@
+jobs:
+  build: # имя взято для примера
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: npm install
+      # Запускаем линтер
+      - run: npm run lint
+      # Запускаем тесты
+      # у шагов может быть имя, иногда это помогает отладке
+      # имя выводится на Github при просмотре сборки
+      - name: run tests
+        run: npm test
